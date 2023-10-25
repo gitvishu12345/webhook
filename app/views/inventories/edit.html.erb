@@ -1,0 +1,31 @@
+<h1>Inventories - Update</h1>
+<%= form_with(model: @inventories, local: true) do |form| %>
+  <p>
+    <%= form.label :sku %><br>
+    <%= form.text_field :sku %>
+  </p>
+ 
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </p>
+
+  <p>
+    <%= form.label :quntity %><br>
+    <%= form.text_field :quntity %>
+  </p>
+
+  <p>
+    <%= form.label :user_id %><br>
+    <%= form.text_field :user_id %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<p>
+	<%= link_to 'Back', root_path %>
+</p>

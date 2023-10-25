@@ -1,0 +1,31 @@
+<h1>Inventories - new</h1>
+<% if @inventory.errors.any? %>
+  <h3>The following errors prevented the inventory from being saved:</h3>
+  <ul>
+    <% @inventory.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li> 
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with scope: :inventory, url: inventories_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :sku %><br>
+    <%= form.text_field :sku %>
+  </p>
+ 
+  <p>
+    <%= form.label :price %><br>
+    <%= form.number_field :price %>
+  </p>
+
+  <p>
+    <%= form.label :quntity %><br>
+    <%= form.number_field :quntity %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

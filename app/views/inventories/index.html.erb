@@ -1,0 +1,22 @@
+
+<h1>Inventory</h1>
+
+<h2><%= link_to 'Create', new_inventory_path %></h2>
+ 
+<table>
+  <tr>
+    <th>SKU</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+ 
+  <% @inventories.each do |inventory| %>
+    <tr>
+      <td><%= inventory.sku %></td>
+      <td><%= inventory.price %></td>
+      <td><%= inventory.quntity %></td>
+      <td><%= link_to 'Show', inventory_path(inventory) %></td>
+      <td><%= link_to 'Edit', edit_inventory_path(inventory.id) %></td>
+    </tr>
+  <% end %>
+</table>
