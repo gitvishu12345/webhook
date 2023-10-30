@@ -1,0 +1,45 @@
+Approach to the Assessment:
+
+1. Understanding the Requirements: 
+
+  1.Thoroughly review the provided instructions and requirements to ensure a clear understanding of the task at hand
+
+2. Setting Up the Rails App:
+
+  1.Begin by creating a new Rails application named webhook_app with Mysql as the database.
+    Ensure all necessary dependencies are installed and configured.
+  2. Rails 6.1.7.6 , Ruby 3.0
+
+3. Model and Validation:
+
+  1.Generate a model named 
+   	a.Inventory with attributes sku,quntity,price.
+   	b.Webhook with attributes status, create_url, update_url,
+   	c.User with attributes user_email
+   
+  2.Implement basic validations to ensure data integrity.
+
+4. Association & Basic Validations: 
+
+	1.Implement basic validations to ensure data integrity
+
+	2.Establish associations between models 
+		a. User has_many inventories
+		b. User has_one webhook
+
+5. Controller & Views Development:
+
+	1.Create a controller named InventoriesController with CURD operations.
+
+	2.Added Views for invenotris CURD operations. 
+
+6. Implementing Webhook Delivery System: 
+
+	1.Utilize model callbacks (after_create and after_update) to trigger notifications to the configured third-party endpoints using webhook model
+
+	2.Use the 'rest_client' gem to make HTTP POST requests to the specified endpoints.
+
+	3.Currently used synchronous call but if needed we can implement asynchronous.
+
+
+

@@ -26,7 +26,7 @@ class InventoriesController < ApplicationController
 
   def create
     @inventory = Inventory.new(inv_params)
-    @inventory.user_id = 1 #this only for time beging aadded
+    @inventory.user_id = 1 #this only for time being aadded
     if @inventory.save
       redirect_to @inventory
     else
